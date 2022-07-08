@@ -1,0 +1,29 @@
+BOT_NAME = 'imgs'
+
+SPIDER_MODULES = ['imgs.spiders']
+NEWSPIDER_MODULE = 'imgs.spiders'
+
+USER_AGENT = 'Mozilla/5.0'
+
+ROBOTSTXT_OBEY = True
+
+IMG_PATH = "img_save"
+
+Q_START = 550000000
+Q_END = 550001000
+
+REDIS_HOST = "localhost"
+REDIS_PORT = 6379
+REDIS_DB = 0
+REDIS_PASSWORD = ""
+
+ITEM_PIPELINES = {
+    "imgs.pipelines.RedisPipeline": 300,
+    "imgs.pipelines.ImgsDownloadPipeline": 301,
+}
+
+
+AUTOTHROTTLE_ENABLED = True
+AUTOTHROTTLE_TARGET_CONCURRENCY = 1
+CONCURRENT_REQUESTS_PER_DOMAIN = 1
+DOWNLOAD_DELAY = 1
