@@ -18,4 +18,4 @@
 
 哦，对了，启动需要使用scrapy crawl face
 
-作者：仙草哥哥，程序请勿乱用哦
+作者：sagegrass，程序请勿乱用哦
